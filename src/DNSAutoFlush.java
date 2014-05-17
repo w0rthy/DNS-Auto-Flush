@@ -1,12 +1,19 @@
 package dns.auto.flush;
 
 import java.io.IOException;
+import javax.swing.JFrame;
 
 public class DNSAutoFlush {
 
     public static void main(String[] args) throws IOException, InterruptedException {
-        while(true)
+        JFrame jf = new JFrame();
+        jf.pack();
+        jf.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        jf.setTitle("DNS Auto Flusher");
+        jf.setVisible(true);
+        while(true){
             start();
+        }
     }
     
     public static void start() throws IOException, InterruptedException
